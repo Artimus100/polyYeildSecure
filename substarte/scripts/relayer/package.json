@@ -1,0 +1,14 @@
+{
+  "name": "relayer-service",
+  "version": "1.0.0",
+  "description": "Relayer service for cross-chain communication between Ethereum and Substrate",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "@polkadot/api": "^4.5.1",
+    "web3": "^1.5.2",
+    "dotenv": "^8.2.0"
+  }
+}
