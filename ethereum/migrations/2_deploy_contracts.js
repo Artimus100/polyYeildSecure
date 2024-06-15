@@ -1,6 +1,10 @@
 // migrations/2_deploy_contracts.js
-const Lock = artifacts.require("Lock");
+const Dependency = artifacts.require("Dependency");
+const MainContract = artifacts.require("MainContract");
 
-module.exports = function (deployer) {
-  deployer.deploy(Lock);
+module.exports = async function (deployer) {
+  await deployer.deploy(Dependency);
+  const dependency = await Dependency.deployed();
+
+  await deployer.deploy(MainContract, dependency.address);
 };
