@@ -1,37 +1,44 @@
 require('dotenv').config();
-const Web3 = require('web3');
 const { ApiPromise, WsProvider, Keyring } = require('@polkadot/api');
 
-// Ethereum setup
-const web3 = new Web3(process.env.ETH_NODE_URL);
-const ethContractAddress = process.env.ETH_CONTRACT_ADDRESS;
-const ethAbi = JSON.parse(process.env.ETH_CONTRACT_ABI);
+async function main() {
+    // Source chain connection
+    const sourceProvider = new WsProvider(process.env.SOURCE_WS_PROVIDER_URL);
+    const sourceApi = await ApiPromise.create({ provider: sourceProvider });
 
-// Substrate setup
-const substrateProvider = new WsProvider(process.env.SUBSTRATE_NODE_URL);
-const keyring = new Keyring({ type: 'sr25519' });
-const substrateAccount = keyring.addFromUri(process.env.SUBSTRATE_ACCOUNT_URI);
+    // Target chain connection
+    const targetProvider = new WsProvider(process.env.TARGET_WS_PROVIDER_URL);
+    const targetApi = await ApiPromise.create({ provider: targetProvider });
 
-async function listenToEthereum() {
-    const ethContract = new web3.eth.Contract(ethAbi, ethContractAddress);
+    const keyring = new Keyring({ type: 'sr25519' });
+    const relayerAccount = keyring.addFromUri(process.env.RELAYER_SEED);
 
-    ethContract.events.ValueChanged()
-        .on('data', async (event) => {
-            const newValue = event.returnValues.newValue;
-            console.log(`New value from Ethereum: ${newValue}`);
+    sourceApi.query.system.events(async (events) => {
+        events.forEach(async (record) => {
+            const { event, phase } = record;
+            if (event.section === 'crossChain' && event.method === 'AssetLocked') {
+                const [account, amount] = event.data;
+                console.log(`AssetLocked: ${account} locked ${amount.toString()}`);
 
-            const api = await ApiPromise.create({ provider: substrateProvider });
-
-            // Interact with Substrate contract
-            await api.tx.myContractModule
-                .set(newValue)
-                .signAndSend(substrateAccount, ({ status }) => {
-                    if (status.isInBlock) {
-                        console.log(`Transaction included at blockHash ${status.asInBlock}`);
-                    }
-                });
-        })
-        .on('error', console.error);
+                // Implement the logic to initiate the transfer on the target blockchain
+                try {
+                    const unsub = await targetApi.tx.crossChain
+                        .unlockAsset(account, amount)
+                        .signAndSend(relayerAccount, (result) => {
+                            console.log(`Current status is ${result.status}`);
+                            if (result.status.isInBlock) {
+                                console.log(`Transaction included at blockHash ${result.status.asInBlock}`);
+                            } else if (result.status.isFinalized) {
+                                console.log(`Transaction finalized at blockHash ${result.status.asFinalized}`);
+                                unsub();
+                            }
+                        });
+                } catch (error) {
+                    console.error('Error sending transaction to target chain:', error);
+                }
+            }
+        });
+    });
 }
 
-listenToEthereum();
+main().catch(console.error);

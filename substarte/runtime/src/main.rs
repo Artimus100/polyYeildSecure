@@ -1,7 +1,7 @@
-// Import the pallet
-pub use pallet_cross_chain;
-
-// Configure the pallet in the runtime
-impl pallet_contracts::Config for Runtime {
+impl pallet_cross_chain::Config for Runtime {
     type Event = Event;
+    type Currency = Balances;
 }
+
+// In the construct_runtime! macro
+CrossChain: pallet_cross_chain::{Pallet, Call, Storage, Event<T>},
