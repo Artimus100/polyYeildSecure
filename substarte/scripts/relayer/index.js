@@ -1,44 +1,54 @@
 require('dotenv').config();
-const { ApiPromise, WsProvider, Keyring } = require('@polkadot/api');
+const { ApiPromise, WsProvider } = require('@polkadot/api');
 
 async function main() {
-    // Source chain connection
-    const sourceProvider = new WsProvider(process.env.SOURCE_WS_PROVIDER_URL);
-    const sourceApi = await ApiPromise.create({ provider: sourceProvider });
+    try {
+        console.log('Connecting to source chain...');
+        const sourceProvider = new WsProvider(process.env.SOURCE_WS_PROVIDER_URL);
+        const sourceApi = await ApiPromise.create({ provider: sourceProvider });
 
-    // Target chain connection
-    const targetProvider = new WsProvider(process.env.TARGET_WS_PROVIDER_URL);
-    const targetApi = await ApiPromise.create({ provider: targetProvider });
+        // Fetch metadata
+        const metadata = await sourceApi.rpc.state.getMetadata();
 
-    const keyring = new Keyring({ type: 'sr25519' });
-    const relayerAccount = keyring.addFromUri(process.env.RELAYER_SEED);
+        // Decode metadata
+        const decodedMetadata = metadata.asLatest;
+        console.log('Decoded Metadata:', decodedMetadata);
 
-    sourceApi.query.system.events(async (events) => {
-        events.forEach(async (record) => {
-            const { event, phase } = record;
-            if (event.section === 'crossChain' && event.method === 'AssetLocked') {
-                const [account, amount] = event.data;
-                console.log(`AssetLocked: ${account} locked ${amount.toString()}`);
-
-                // Implement the logic to initiate the transfer on the target blockchain
-                try {
-                    const unsub = await targetApi.tx.crossChain
-                        .unlockAsset(account, amount)
-                        .signAndSend(relayerAccount, (result) => {
-                            console.log(`Current status is ${result.status}`);
-                            if (result.status.isInBlock) {
-                                console.log(`Transaction included at blockHash ${result.status.asInBlock}`);
-                            } else if (result.status.isFinalized) {
-                                console.log(`Transaction finalized at blockHash ${result.status.asFinalized}`);
-                                unsub();
-                            }
-                        });
-                } catch (error) {
-                    console.error('Error sending transaction to target chain:', error);
+        // Example: Query system events
+        sourceApi.query.system.events(async (events) => {
+            events.forEach((record) => {
+                const { event } = record;
+                if (event.section === 'system' && event.method === 'ExtrinsicSuccess') {
+                    console.log('Extrinsic success event detected:', event);
+                    const eventData = event.data.toJSON();
+                    // Perform actions based on the event data
+                    if (eventData.length > 0) {
+                        const accountId = eventData[0];
+                        console.log(`Account ${accountId} successfully executed an extrinsic.`);
+                        // Example: Trigger another transaction based on the event
+                        triggerTransaction(sourceApi, accountId);
+                    }
                 }
-            }
+            });
         });
-    });
+
+        sourceApi.on('disconnected', () => {
+            console.error('Disconnected from source chain');
+        });
+
+    } catch (error) {
+        console.error('Error initializing the API or fetching metadata:', error);
+    }
+}
+
+async function triggerTransaction(api, accountId) {
+    try {
+        // Example: Construct and send a transaction to another chain
+        const txHash = await api.tx.exampleModule.exampleFunction(accountId).signAndSend();
+        console.log(`Transaction sent with hash: ${txHash}`);
+    } catch (error) {
+        console.error('Error triggering transaction:', error);
+    }
 }
 
 main().catch(console.error);
