@@ -1,8 +1,23 @@
 [package]
-name = "node"
+name = "node-template"
 version = "0.1.0"
-edition = "2021"
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+edition = "2018"
 
 [dependencies]
+node-template-runtime = { path = "../runtime", default-features = false }
+node-template-service = { path = "../service", default-features = false }
+sc-cli = { version = "4.0.0-dev" }
+sc-service = { version = "4.0.0-dev" }
+structopt = "0.3"
+
+[build-dependencies]
+substrate-build-script-utils = { version = "3.0.0" }
+
+[features]
+default = ["std"]
+std = [
+    "node-template-runtime/std",
+    "node-template-service/std",
+    "sc-cli/std",
+    "sc-service/std",
+]

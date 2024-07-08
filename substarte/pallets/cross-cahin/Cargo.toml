@@ -1,0 +1,9 @@
+[package]
+name = "pallet-cross-chain"
+version = "0.1.0"
+edition = "2018"
+
+[dependencies]
+frame-support = { version = "4.0.0", default-features = false }
+frame-system = { version = "4.0.0", default-features = false }
+sp-std = "4.0.0"
