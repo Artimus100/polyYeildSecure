@@ -3,5 +3,5 @@
 members = [
     "node",
     "runtime",
-    "palltes/cross-chain",
- "contracts/my_contract"]
+   
+ "contracts/my_contract", "pallets/cross-chain"]
