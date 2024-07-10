@@ -1,11 +1,7 @@
 [workspace]
-members = [
-    "contracts/my_contract",
-    "pallets/cross-chain",
-    "node",
-    "runtime"
-    # Add other members if any
-]
 
-# Make sure there are no invalid or unnecessary dependencies listed
-[workspace.dependencies]
+members = [
+    "node",
+    "runtime",
+    "palltes/cross-chain",
+ "contracts/my_contract"]
