@@ -1,0 +1,10 @@
+/Users/artimus100/Desktop/polyYeildSecure/substarte/target/release/deps/libprost_types-51315091a6a067a9.rmeta: /Users/artimus100/.cargo/registry/src/index.crates.io-6f17d22bba15001f/prost-types-0.11.9/src/lib.rs /Users/artimus100/.cargo/registry/src/index.crates.io-6f17d22bba15001f/prost-types-0.11.9/src/datetime.rs /Users/artimus100/.cargo/registry/src/index.crates.io-6f17d22bba15001f/prost-types-0.11.9/src/compiler.rs /Users/artimus100/.cargo/registry/src/index.crates.io-6f17d22bba15001f/prost-types-0.11.9/src/protobuf.rs
+
+/Users/artimus100/Desktop/polyYeildSecure/substarte/target/release/deps/libprost_types-51315091a6a067a9.rlib: /Users/artimus100/.cargo/registry/src/index.crates.io-6f17d22bba15001f/prost-types-0.11.9/src/lib.rs /Users/artimus100/.cargo/registry/src/index.crates.io-6f17d22bba15001f/prost-types-0.11.9/src/datetime.rs /Users/artimus100/.cargo/registry/src/index.crates.io-6f17d22bba15001f/prost-types-0.11.9/src/compiler.rs /Users/artimus100/.cargo/registry/src/index.crates.io-6f17d22bba15001f/prost-types-0.11.9/src/protobuf.rs
+
+/Users/artimus100/Desktop/polyYeildSecure/substarte/target/release/deps/prost_types-51315091a6a067a9.d: /Users/artimus100/.cargo/registry/src/index.crates.io-6f17d22bba15001f/prost-types-0.11.9/src/lib.rs /Users/artimus100/.cargo/registry/src/index.crates.io-6f17d22bba15001f/prost-types-0.11.9/src/datetime.rs /Users/artimus100/.cargo/registry/src/index.crates.io-6f17d22bba15001f/prost-types-0.11.9/src/compiler.rs /Users/artimus100/.cargo/registry/src/index.crates.io-6f17d22bba15001f/prost-types-0.11.9/src/protobuf.rs
+
+/Users/artimus100/.cargo/registry/src/index.crates.io-6f17d22bba15001f/prost-types-0.11.9/src/lib.rs:
+/Users/artimus100/.cargo/registry/src/index.crates.io-6f17d22bba15001f/prost-types-0.11.9/src/datetime.rs:
+/Users/artimus100/.cargo/registry/src/index.crates.io-6f17d22bba15001f/prost-types-0.11.9/src/compiler.rs:
+/Users/artimus100/.cargo/registry/src/index.crates.io-6f17d22bba15001f/prost-types-0.11.9/src/protobuf.rs:

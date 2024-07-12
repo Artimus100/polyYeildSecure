@@ -1,0 +1,10 @@
+/Users/artimus100/Desktop/polyYeildSecure/substarte/target/release/deps/libsp_rpc-a6056713c74caa47.rmeta: /Users/artimus100/.cargo/git/checkouts/polkadot-sdk-cff69157b985ed76/3c3d6fc/substrate/primitives/rpc/src/lib.rs /Users/artimus100/.cargo/git/checkouts/polkadot-sdk-cff69157b985ed76/3c3d6fc/substrate/primitives/rpc/src/list.rs /Users/artimus100/.cargo/git/checkouts/polkadot-sdk-cff69157b985ed76/3c3d6fc/substrate/primitives/rpc/src/number.rs /Users/artimus100/.cargo/git/checkouts/polkadot-sdk-cff69157b985ed76/3c3d6fc/substrate/primitives/rpc/src/tracing.rs
+
+/Users/artimus100/Desktop/polyYeildSecure/substarte/target/release/deps/libsp_rpc-a6056713c74caa47.rlib: /Users/artimus100/.cargo/git/checkouts/polkadot-sdk-cff69157b985ed76/3c3d6fc/substrate/primitives/rpc/src/lib.rs /Users/artimus100/.cargo/git/checkouts/polkadot-sdk-cff69157b985ed76/3c3d6fc/substrate/primitives/rpc/src/list.rs /Users/artimus100/.cargo/git/checkouts/polkadot-sdk-cff69157b985ed76/3c3d6fc/substrate/primitives/rpc/src/number.rs /Users/artimus100/.cargo/git/checkouts/polkadot-sdk-cff69157b985ed76/3c3d6fc/substrate/primitives/rpc/src/tracing.rs
+
+/Users/artimus100/Desktop/polyYeildSecure/substarte/target/release/deps/sp_rpc-a6056713c74caa47.d: /Users/artimus100/.cargo/git/checkouts/polkadot-sdk-cff69157b985ed76/3c3d6fc/substrate/primitives/rpc/src/lib.rs /Users/artimus100/.cargo/git/checkouts/polkadot-sdk-cff69157b985ed76/3c3d6fc/substrate/primitives/rpc/src/list.rs /Users/artimus100/.cargo/git/checkouts/polkadot-sdk-cff69157b985ed76/3c3d6fc/substrate/primitives/rpc/src/number.rs /Users/artimus100/.cargo/git/checkouts/polkadot-sdk-cff69157b985ed76/3c3d6fc/substrate/primitives/rpc/src/tracing.rs
+
+/Users/artimus100/.cargo/git/checkouts/polkadot-sdk-cff69157b985ed76/3c3d6fc/substrate/primitives/rpc/src/lib.rs:
+/Users/artimus100/.cargo/git/checkouts/polkadot-sdk-cff69157b985ed76/3c3d6fc/substrate/primitives/rpc/src/list.rs:
+/Users/artimus100/.cargo/git/checkouts/polkadot-sdk-cff69157b985ed76/3c3d6fc/substrate/primitives/rpc/src/number.rs:
+/Users/artimus100/.cargo/git/checkouts/polkadot-sdk-cff69157b985ed76/3c3d6fc/substrate/primitives/rpc/src/tracing.rs:

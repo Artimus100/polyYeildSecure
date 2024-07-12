@@ -2,6 +2,8 @@
 
 // Import required dependencies
 use sc_cli::SubstrateCli;
+use structopt::StructOpt;
+
 use node_template_runtime::Block;
 use node_template_service::new_partial;
 use sc_service::{Configuration, error::Error as ServiceError};

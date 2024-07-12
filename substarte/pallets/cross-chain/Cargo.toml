@@ -1,6 +1,19 @@
 [package]
-name = "cross-chain"
+name = "pallet-cross-chain"
 version = "0.1.0"
 edition = "2021"
 
 [dependencies]
+frame-support = { version = "3.0.0", default-features = false }
+frame-system = { version = "3.0.0", default-features = false }
+sp-std = "3.0.0"
+sp-runtime = "3.0.0"
+
+[features]
+default = ["std"]
+std = [
+    "frame-support/std",
+    "frame-system/std",
+    "sp-std/std",
+    "sp-runtime/std",
+]

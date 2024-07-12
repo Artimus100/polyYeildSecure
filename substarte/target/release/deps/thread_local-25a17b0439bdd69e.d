@@ -1,0 +1,10 @@
+/Users/artimus100/Desktop/polyYeildSecure/substarte/target/release/deps/libthread_local-25a17b0439bdd69e.rmeta: /Users/artimus100/.cargo/registry/src/index.crates.io-6f17d22bba15001f/thread_local-1.1.7/src/lib.rs /Users/artimus100/.cargo/registry/src/index.crates.io-6f17d22bba15001f/thread_local-1.1.7/src/cached.rs /Users/artimus100/.cargo/registry/src/index.crates.io-6f17d22bba15001f/thread_local-1.1.7/src/thread_id.rs /Users/artimus100/.cargo/registry/src/index.crates.io-6f17d22bba15001f/thread_local-1.1.7/src/unreachable.rs
+
+/Users/artimus100/Desktop/polyYeildSecure/substarte/target/release/deps/libthread_local-25a17b0439bdd69e.rlib: /Users/artimus100/.cargo/registry/src/index.crates.io-6f17d22bba15001f/thread_local-1.1.7/src/lib.rs /Users/artimus100/.cargo/registry/src/index.crates.io-6f17d22bba15001f/thread_local-1.1.7/src/cached.rs /Users/artimus100/.cargo/registry/src/index.crates.io-6f17d22bba15001f/thread_local-1.1.7/src/thread_id.rs /Users/artimus100/.cargo/registry/src/index.crates.io-6f17d22bba15001f/thread_local-1.1.7/src/unreachable.rs
+
+/Users/artimus100/Desktop/polyYeildSecure/substarte/target/release/deps/thread_local-25a17b0439bdd69e.d: /Users/artimus100/.cargo/registry/src/index.crates.io-6f17d22bba15001f/thread_local-1.1.7/src/lib.rs /Users/artimus100/.cargo/registry/src/index.crates.io-6f17d22bba15001f/thread_local-1.1.7/src/cached.rs /Users/artimus100/.cargo/registry/src/index.crates.io-6f17d22bba15001f/thread_local-1.1.7/src/thread_id.rs /Users/artimus100/.cargo/registry/src/index.crates.io-6f17d22bba15001f/thread_local-1.1.7/src/unreachable.rs
+
+/Users/artimus100/.cargo/registry/src/index.crates.io-6f17d22bba15001f/thread_local-1.1.7/src/lib.rs:
+/Users/artimus100/.cargo/registry/src/index.crates.io-6f17d22bba15001f/thread_local-1.1.7/src/cached.rs:
+/Users/artimus100/.cargo/registry/src/index.crates.io-6f17d22bba15001f/thread_local-1.1.7/src/thread_id.rs:
+/Users/artimus100/.cargo/registry/src/index.crates.io-6f17d22bba15001f/thread_local-1.1.7/src/unreachable.rs:
