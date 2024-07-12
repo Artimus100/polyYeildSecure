@@ -18,6 +18,8 @@ workspace = true
 targets = ["x86_64-unknown-linux-gnu"]
 
 [dependencies]
+sc-rpc-api = "polkadot-v1.14.0"
+
 structopt = "0.3"
 clap = { version = "4.5.3", features = ["derive"] }
 futures = { version = "0.3.30", features = ["thread-pool"] }

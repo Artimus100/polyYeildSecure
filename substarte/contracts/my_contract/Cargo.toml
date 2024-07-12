@@ -5,3 +5,4 @@ authors = ["Your Name <your.email@example.com>"]
 edition = "2018"
 
 [dependencies]
+sc-rpc-api = "polkadot-v1.14.0"
