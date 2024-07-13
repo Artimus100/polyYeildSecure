@@ -1,8 +1,0 @@
-[package]
-name = "my_contract"
-version = "0.1.0"
-authors = ["Your Name <your.email@example.com>"]
-edition = "2018"
-
-[dependencies]
-sc-rpc-api = "polkadot-v1.14.0"

@@ -1,9 +1,0 @@
-/Users/artimus100/Desktop/polyYeildSecure/substarte/target/release/deps/libpallet_transaction_payment-5e1682a885820194.rmeta: /Users/artimus100/.cargo/git/checkouts/polkadot-sdk-cff69157b985ed76/3c3d6fc/substrate/frame/transaction-payment/src/lib.rs /Users/artimus100/.cargo/git/checkouts/polkadot-sdk-cff69157b985ed76/3c3d6fc/substrate/frame/transaction-payment/src/payment.rs /Users/artimus100/.cargo/git/checkouts/polkadot-sdk-cff69157b985ed76/3c3d6fc/substrate/frame/transaction-payment/src/types.rs
-
-/Users/artimus100/Desktop/polyYeildSecure/substarte/target/release/deps/libpallet_transaction_payment-5e1682a885820194.rlib: /Users/artimus100/.cargo/git/checkouts/polkadot-sdk-cff69157b985ed76/3c3d6fc/substrate/frame/transaction-payment/src/lib.rs /Users/artimus100/.cargo/git/checkouts/polkadot-sdk-cff69157b985ed76/3c3d6fc/substrate/frame/transaction-payment/src/payment.rs /Users/artimus100/.cargo/git/checkouts/polkadot-sdk-cff69157b985ed76/3c3d6fc/substrate/frame/transaction-payment/src/types.rs
-
-/Users/artimus100/Desktop/polyYeildSecure/substarte/target/release/deps/pallet_transaction_payment-5e1682a885820194.d: /Users/artimus100/.cargo/git/checkouts/polkadot-sdk-cff69157b985ed76/3c3d6fc/substrate/frame/transaction-payment/src/lib.rs /Users/artimus100/.cargo/git/checkouts/polkadot-sdk-cff69157b985ed76/3c3d6fc/substrate/frame/transaction-payment/src/payment.rs /Users/artimus100/.cargo/git/checkouts/polkadot-sdk-cff69157b985ed76/3c3d6fc/substrate/frame/transaction-payment/src/types.rs
-
-/Users/artimus100/.cargo/git/checkouts/polkadot-sdk-cff69157b985ed76/3c3d6fc/substrate/frame/transaction-payment/src/lib.rs:
-/Users/artimus100/.cargo/git/checkouts/polkadot-sdk-cff69157b985ed76/3c3d6fc/substrate/frame/transaction-payment/src/payment.rs:
-/Users/artimus100/.cargo/git/checkouts/polkadot-sdk-cff69157b985ed76/3c3d6fc/substrate/frame/transaction-payment/src/types.rs:
