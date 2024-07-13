@@ -10,10 +10,12 @@ resolver = "2"
 [workspace.dependencies]
 frame-support = { git = "https://github.com/paritytech/polkadot-sdk.git", tag = "polkadot-v1.9.0", default-features = false, features = ["std"] }
 frame-system = { git = "https://github.com/paritytech/polkadot-sdk.git", tag = "polkadot-v1.9.0", default-features = false, features = ["std"] }
+parity-scale-codec = { version = "3.6.12", default-features = false }
+scale-info = { version = "2.11.3", default-features = false }
 schnorrkel = "0.11.4"
 
-crosschain = { version = "0.1.0", path = "pallets/crosschain" }
-runtime = { version = "0.1.0", path = "pallets/runtime" }
+pallet-crosschain = { path = "pallets/crosschain" }
+pallet-yield-farming = { path = "pallets/yield-farming" }
 
 [workspace.package]
 authors = ["Substrate DevHub <https://github.com/substrate-developer-hub>"]
@@ -27,7 +29,6 @@ panic = "unwind"
 
 [workspace.lints.rust]
 suspicious_double_ref_op = { level = "allow", priority = 2 }
-
 [workspace.lints.clippy]
 all = { level = "allow", priority = 0 }
 correctness = { level = "warn", priority = 1 }

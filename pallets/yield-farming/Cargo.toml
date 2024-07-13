@@ -1,5 +1,5 @@
 [package]
-name = "yield-farming"
+name = "pallet-yield-farming"
 version = "0.1.0"
 authors = ["Your Name <your.email@example.com>"]
 edition = "2021"
@@ -8,8 +8,13 @@ repository = "https://github.com/your/project/repository"
 homepage = "https://yourprojecthomepage.com"
 
 [dependencies]
+sp-runtime = { git = "https://github.com/paritytech/polkadot-sdk.git", tag = "polkadot-v1.9.0", default-features = false, features = ["std"] }
 frame-support = { git = "https://github.com/paritytech/polkadot-sdk.git", tag = "polkadot-v1.9.0", default-features = false, features = ["std"] }
 frame-system = { git = "https://github.com/paritytech/polkadot-sdk.git", tag = "polkadot-v1.9.0", default-features = false, features = ["std"] }
+parity-scale-codec = { version = "3.6.12", default-features = false }
+scale-info = { version = "2.11.3", default-features = false }
+sp-std = { git = "https://github.com/paritytech/polkadot-sdk.git", tag = "polkadot-v1.9.0", default-features = false, features = ["std"] }
+
 schnorrkel = "0.11.4"
 
 [lib]
@@ -17,7 +22,15 @@ path = "src/lib.rs"
 
 [features]
 default = ["std"]
-std = ["frame-support/std"]
+std = [
+    "frame-support/std",
+    "frame-system/std",
+    "sp-runtime/std",
+    "sp-std/std",
+    "parity-scale-codec/std",
+    "scale-info/std",
+
+]
 
 [lints]
 workspace = true

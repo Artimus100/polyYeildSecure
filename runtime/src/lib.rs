@@ -1,15 +1,23 @@
-// Add these imports at the top
-pub use pallet_crosschain;
-pub use pallet_yield_farming;
+#![cfg_attr(not(feature = "std"), no_std)]
 
-impl pallet_crosschain::Config for Runtime {
-    type Event = Event;
-}
+pub use frame_support::construct_runtime;
+pub use frame_support::pallet_prelude::*;
+pub use frame_system::pallet_prelude::*;
 
-impl pallet_yield_farming::Config for Runtime {
-    type Event = Event;
-}
+// Import pallets
+pub use pallet_crosschain as Crosschain;
+pub use pallet_yield_farming as YieldFarming;
 
-// Add these in the construct_runtime macro
-Crosschain: pallet_crosschain::{Pallet, Call, Storage, Event<T>},
-YieldFarming: pallet_yield_farming::{Pallet, Call, Storage, Event<T>},
+construct_runtime!(
+    pub enum Runtime where
+        Block = Block,
+        NodeBlock = opaque::Block,
+        UncheckedExtrinsic = UncheckedExtrinsic
+    {
+        // Other modules...
+
+        // Pallets
+        Crosschain: pallet_crosschain::{Pallet, Call, Storage, Event<T>},
+        YieldFarming: pallet_yield_farming::{Pallet, Call, Storage, Event<T>},
+    }
+);

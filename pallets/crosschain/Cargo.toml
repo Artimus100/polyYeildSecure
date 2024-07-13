@@ -1,5 +1,5 @@
 [package]
-name = "crosschain"
+name = "pallet-crosschain"
 version = "0.1.0"
 license = "MIT-0"
 authors = ["Your Name <your.email@example.com>"]
@@ -11,25 +11,25 @@ publish = false
 [dependencies]
 schnorrkel = "0.11.4"
 
-codec = { package = "parity-scale-codec", version = "3.6.1", default-features = false, features = ["derive"] }
 scale-info = { version = "2.10.0", default-features = false, features = ["derive"] }
 
 # frame deps
 frame-benchmarking = { git = "https://github.com/paritytech/polkadot-sdk.git", tag = "polkadot-v1.14.0", default-features = false, optional = true }
 frame-support = { git = "https://github.com/paritytech/polkadot-sdk.git", tag = "polkadot-v1.9.0", default-features = false, features = ["std"] }
 frame-system = { git = "https://github.com/paritytech/polkadot-sdk.git", tag = "polkadot-v1.9.0", default-features = false, features = ["std"] }
+parity-scale-codec = { version = "3.6.12", default-features = false }
+sp-std = { git = "https://github.com/paritytech/polkadot-sdk.git", tag = "polkadot-v1.9.0", default-features = false, features = ["std"] }
 
 sp-runtime = { git = "https://github.com/paritytech/polkadot-sdk.git", tag = "polkadot-v1.9.0", default-features = false }
-sp-io = { git = "https://github.com/paritytech/polkadot-sdk.git", tag = "polkadot-v1.9.0" }
 
 [dev-dependencies]
 sp-core = { git = "https://github.com/paritytech/polkadot-sdk.git", tag = "polkadot-v1.9.0" }
 sp-io = { git = "https://github.com/paritytech/polkadot-sdk.git", tag = "polkadot-v1.9.0" }
 
+
 [features]
 default = ["std"]
 std = [
-    "codec/std",
     "frame-benchmarking?/std",
     "frame-support/std",
     "frame-system/std",
@@ -37,6 +37,9 @@ std = [
     "sp-core/std",
     "sp-io/std",
     "sp-runtime/std",
+	"sp-std/std",
+    "parity-scale-codec/std",
+    "scale-info/std",
 ]
 runtime-benchmarks = [
     "frame-benchmarking/runtime-benchmarks",
