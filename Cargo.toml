@@ -7,8 +7,12 @@ members = [
 ]
 resolver = "2"
 
+
 [workspace.dependencies]
+zstd-safe = { path = "zstd-safe", version = "7.1.0", default-features = false, features = ["std"] }
+cargo-xcode = "1.11.0"
 errno = "0.3.9"
+clang = "2.0.0"
 frame-support = { git = "https://github.com/paritytech/polkadot-sdk.git", tag = "polkadot-v1.9.0", default-features = false, features = ["std"] }
 frame-system = { git = "https://github.com/paritytech/polkadot-sdk.git", tag = "polkadot-v1.9.0", default-features = false, features = ["std"] }
 parity-scale-codec = { version = "3.6.12", default-features = false }
