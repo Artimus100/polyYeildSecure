@@ -1,0 +1,12 @@
+[package]
+name = "polyyieldsecure-errors"
+version = "0.1.0"
+edition = "2018"
+
+[dependencies]
+# Example: if using `thiserror` for custom error types
+thiserror = "1.0"
+
+[lib]
+name = "polyyieldsecure_errors"
+path = "src/lib.rs"

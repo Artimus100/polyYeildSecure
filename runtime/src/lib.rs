@@ -7,16 +7,7 @@ use frame_support::{
 use frame_system::{self as system, ensure_signed};
 use sp_std::prelude::*;
 
-// Import pallets
-pub mod balances;
-pub mod timestamp;
-pub mod aura;
-pub mod grandpa;
-pub mod transaction_payment;
-pub mod sudo;
 
-// Custom Pallets specific to PolyYieldSecure
-pub mod pallet_template;
 
 // Configuration Trait
 pub trait Trait: balances::Trait
@@ -180,3 +171,15 @@ pub const METADATA: RuntimeMetadata = {
         ],
     }
 };
+use polyyieldsecure_errors::{PolyYieldSecureError, example_function};
+
+fn main() {
+    if let Err(err) = example_function() {
+        eprintln!("Error occurred: {}", err);
+        if let Some(source) = err.source() {
+            eprintln!("Caused by: {}", source);
+        }
+        std::process::exit(1);
+    }
+}
+

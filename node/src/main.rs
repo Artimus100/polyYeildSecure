@@ -7,7 +7,16 @@ mod cli;
 mod command;
 mod rpc;
 mod service;
+use polyyieldsecure_errors::{PolyYieldSecureError, example_function};
 
 fn main() -> sc_cli::Result<()> {
-	command::run()
+
+	Ok(if let Err(err) = example_function() {
+        eprintln!("Error occurred: {}", err);
+        if let Some(source) = err.source() {
+            eprintln!("Caused by: {}", source);
+        }
+        std::process::exit(1);
+    })
+
 }

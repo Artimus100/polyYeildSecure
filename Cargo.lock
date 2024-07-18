@@ -4841,6 +4841,7 @@ dependencies = [
  "pallet-transaction-payment",
  "pallet-transaction-payment-rpc",
  "pallet-yield-farming",
+ "rand_core 0.6.4",
  "runtime",
  "sc-basic-authorship",
  "sc-cli",
@@ -5125,12 +5126,11 @@ version = "0.1.0"
 dependencies = [
  "cargo-xcode",
  "clang",
- "errno",
  "frame-benchmarking 28.0.0 (git+https://github.com/paritytech/polkadot-sdk.git?tag=polkadot-v1.14.0)",
  "frame-support 28.0.0 (git+https://github.com/paritytech/polkadot-sdk.git?tag=polkadot-v1.9.0)",
  "frame-system 28.0.0 (git+https://github.com/paritytech/polkadot-sdk.git?tag=polkadot-v1.9.0)",
- "libc",
  "parity-scale-codec",
+ "rand_core 0.6.4",
  "scale-info",
  "schnorrkel",
  "sp-core 28.0.0 (git+https://github.com/paritytech/polkadot-sdk.git?tag=polkadot-v1.9.0)",
@@ -5270,13 +5270,13 @@ version = "0.1.0"
 dependencies = [
  "cargo-xcode",
  "clang",
- "errno",
  "frame-support 28.0.0 (git+https://github.com/paritytech/polkadot-sdk.git?tag=polkadot-v1.9.0)",
  "frame-system 28.0.0 (git+https://github.com/paritytech/polkadot-sdk.git?tag=polkadot-v1.9.0)",
- "libc",
  "parity-scale-codec",
+ "rand_core 0.6.4",
  "scale-info",
  "schnorrkel",
+ "sp-core 28.0.0 (git+https://github.com/paritytech/polkadot-sdk.git?tag=polkadot-v1.9.0)",
  "sp-runtime 31.0.1 (git+https://github.com/paritytech/polkadot-sdk.git?tag=polkadot-v1.9.0)",
  "sp-std 14.0.0 (git+https://github.com/paritytech/polkadot-sdk.git?tag=polkadot-v1.9.0)",
 ]
@@ -6409,7 +6409,6 @@ version = "0.1.0"
 dependencies = [
  "cargo-xcode",
  "clang",
- "errno",
  "frame-benchmarking 28.0.0 (git+https://github.com/paritytech/polkadot-sdk.git?tag=polkadot-v1.14.0)",
  "frame-executive",
  "frame-support 28.0.0 (git+https://github.com/paritytech/polkadot-sdk.git?tag=polkadot-v1.9.0)",
@@ -6418,7 +6417,6 @@ dependencies = [
  "frame-system-rpc-runtime-api",
  "frame-try-runtime",
  "getrandom 0.2.15",
- "libc",
  "opaque",
  "pallet-aura",
  "pallet-balances",
@@ -6430,6 +6428,7 @@ dependencies = [
  "pallet-transaction-payment-rpc-runtime-api",
  "pallet-yield-farming",
  "parity-scale-codec",
+ "rand_core 0.6.4",
  "scale-info",
  "schnorrkel",
  "sp-api 26.0.0 (git+https://github.com/paritytech/polkadot-sdk.git?tag=polkadot-v1.9.0)",
@@ -8394,7 +8393,7 @@ dependencies = [
 [[package]]
 name = "sp-crypto-ec-utils"
 version = "0.10.0"
-source = "git+https://github.com/paritytech/polkadot-sdk#1b6292bf7c71d56b793e98b651799f41bb0ef76b"
+source = "git+https://github.com/paritytech/polkadot-sdk#4bcdf8166972b63a70b618c90424b9f7d64b719b"
 dependencies = [
  "ark-bls12-377",
  "ark-bls12-377-ext",
@@ -8489,7 +8488,7 @@ dependencies = [
 [[package]]
 name = "sp-debug-derive"
 version = "14.0.0"
-source = "git+https://github.com/paritytech/polkadot-sdk#1b6292bf7c71d56b793e98b651799f41bb0ef76b"
+source = "git+https://github.com/paritytech/polkadot-sdk#4bcdf8166972b63a70b618c90424b9f7d64b719b"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -8520,7 +8519,7 @@ dependencies = [
 [[package]]
 name = "sp-externalities"
 version = "0.25.0"
-source = "git+https://github.com/paritytech/polkadot-sdk#1b6292bf7c71d56b793e98b651799f41bb0ef76b"
+source = "git+https://github.com/paritytech/polkadot-sdk#4bcdf8166972b63a70b618c90424b9f7d64b719b"
 dependencies = [
  "environmental",
  "parity-scale-codec",
@@ -8834,7 +8833,7 @@ dependencies = [
 [[package]]
 name = "sp-runtime-interface"
 version = "24.0.0"
-source = "git+https://github.com/paritytech/polkadot-sdk#1b6292bf7c71d56b793e98b651799f41bb0ef76b"
+source = "git+https://github.com/paritytech/polkadot-sdk#4bcdf8166972b63a70b618c90424b9f7d64b719b"
 dependencies = [
  "bytes",
  "impl-trait-for-tuples",
@@ -8879,7 +8878,7 @@ dependencies = [
 [[package]]
 name = "sp-runtime-interface-proc-macro"
 version = "17.0.0"
-source = "git+https://github.com/paritytech/polkadot-sdk#1b6292bf7c71d56b793e98b651799f41bb0ef76b"
+source = "git+https://github.com/paritytech/polkadot-sdk#4bcdf8166972b63a70b618c90424b9f7d64b719b"
 dependencies = [
  "Inflector",
  "expander",
@@ -9010,7 +9009,7 @@ source = "git+https://github.com/paritytech/polkadot-sdk.git?tag=polkadot-v1.9.0
 [[package]]
 name = "sp-std"
 version = "14.0.0"
-source = "git+https://github.com/paritytech/polkadot-sdk#1b6292bf7c71d56b793e98b651799f41bb0ef76b"
+source = "git+https://github.com/paritytech/polkadot-sdk#4bcdf8166972b63a70b618c90424b9f7d64b719b"
 
 [[package]]
 name = "sp-storage"
@@ -9040,7 +9039,7 @@ dependencies = [
 [[package]]
 name = "sp-storage"
 version = "19.0.0"
-source = "git+https://github.com/paritytech/polkadot-sdk#1b6292bf7c71d56b793e98b651799f41bb0ef76b"
+source = "git+https://github.com/paritytech/polkadot-sdk#4bcdf8166972b63a70b618c90424b9f7d64b719b"
 dependencies = [
  "impl-serde",
  "parity-scale-codec",
@@ -9088,7 +9087,7 @@ dependencies = [
 [[package]]
 name = "sp-tracing"
 version = "16.0.0"
-source = "git+https://github.com/paritytech/polkadot-sdk#1b6292bf7c71d56b793e98b651799f41bb0ef76b"
+source = "git+https://github.com/paritytech/polkadot-sdk#4bcdf8166972b63a70b618c90424b9f7d64b719b"
 dependencies = [
  "parity-scale-codec",
  "tracing",
@@ -9249,7 +9248,7 @@ dependencies = [
 [[package]]
 name = "sp-wasm-interface"
 version = "20.0.0"
-source = "git+https://github.com/paritytech/polkadot-sdk#1b6292bf7c71d56b793e98b651799f41bb0ef76b"
+source = "git+https://github.com/paritytech/polkadot-sdk#4bcdf8166972b63a70b618c90424b9f7d64b719b"
 dependencies = [
  "impl-trait-for-tuples",
  "log",
@@ -9639,18 +9638,18 @@ checksum = "3369f5ac52d5eb6ab48c6b4ffdc8efbcad6b89c765749064ba298f2c68a16a76"
 
 [[package]]
 name = "thiserror"
-version = "1.0.62"
+version = "1.0.63"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "f2675633b1499176c2dff06b0856a27976a8f9d436737b4cf4f312d4d91d8bbb"
+checksum = "c0342370b38b6a11b6cc11d6a805569958d54cfa061a29969c3b5ce2ea405724"
 dependencies = [
  "thiserror-impl",
 ]
 
 [[package]]
 name = "thiserror-impl"
-version = "1.0.62"
+version = "1.0.63"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "d20468752b09f49e909e55a5d338caa8bedf615594e9d80bc4c565d30faf798c"
+checksum = "a4558b58466b9ad7ca0f102865eccc95938dca1a74a856f2b57b6629050da261"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -11221,3 +11220,8 @@ dependencies = [
  "cc",
  "pkg-config",
 ]
+
+[[patch.unused]]
+name = "rand_core"
+version = "0.9.0-alpha.1"
+source = "git+https://github.com/rust-random/rand?branch=master#1e381d13ee060f678c9a4ca54124ab8af30b4402"
