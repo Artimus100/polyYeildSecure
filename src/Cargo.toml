@@ -1,0 +1,11 @@
+[package]
+name = "polyyieldsecure"
+version = "0.1.0"
+edition = "2018"
+
+[dependencies]
+thiserror = "1.0"
+
+[lib]
+name = "polyyieldsecure"
+path = "src/lib.rs"

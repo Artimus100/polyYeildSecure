@@ -28,8 +28,19 @@ impl fmt::Display for PolyYieldSecureError {
 // Example function that may encounter errors
 pub fn example_function() -> Result<(), PolyYieldSecureError> {
     // Simulating an IO error
-    let result = std::fs::read_to_string("nonexistent_file.txt")
+    let _result = std::fs::read_to_string("nonexistent_file.txt")
         .map_err(|err| PolyYieldSecureError::IoError(err))?;
 
     Ok(())
 }
+use thiserror::Error;
+use std::fmt;
+
+pub enum PolyYieldSecureError {
+    #[error("An error occurred: {0}")]
+    GeneralError(String),
+    #[error("IO error: {0}")]
+    IoError(#[from] std::io::Error),
+    // Add more error variants as needed
+}
+

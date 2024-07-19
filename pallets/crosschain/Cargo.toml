@@ -28,8 +28,8 @@ sp-runtime = { git = "https://github.com/paritytech/polkadot-sdk.git", tag = "po
 [dev-dependencies]
 sp-core = { git = "https://github.com/paritytech/polkadot-sdk.git", tag = "polkadot-v1.9.0", default-features = false, features = ["serde", "std"] }
 sp-io = { git = "https://github.com/paritytech/polkadot-sdk.git", tag = "polkadot-v1.9.0" }
-rand_core = "0.6.4"
-
+[patch.crates-io]
+rand_core = { git = "https://github.com/rust-random/rand", branch = "master" }
 
 [features]
 default = ["std"]

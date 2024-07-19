@@ -4,27 +4,25 @@ members = [
     "pallets/yield-farming",
     "runtime",
     "node",
+    "errors",
 ]
 resolver = "2"
-
 [patch.crates-io]
-rand_core = { git = "https://github.com/rust-random/rand", branch = "master" } 
+rand_core = { git = "https://github.com/rust-random/rand", branch = "master" }
 
 [workspace.dependencies]
 async-io = "2.3.3"
 polling = "3.7.2"
-rustix = "0.38.34"
 
-# Remove the following lines related to errno and libc_errno
-# libc_errno = "0.3.8"
-# errno = "0.3.9" # Use the version from crates.io
-# errno-no-std = "0.2.1"
+
 
 sp-core = { git = "https://github.com/paritytech/polkadot-sdk.git", tag = "polkadot-v1.9.0", default-features = false, features = ["serde", "std"] }
 
 zstd-safe = { path = "zstd-safe", version = "7.1.0", default-features = false, features = ["std"] }
 cargo-xcode = "1.11.0"
 libc = "0.2"
+platform = "1.0.2"
+thiserror = "1.0.63"
 
 clang = "2.0.0"
 frame-support = { git = "https://github.com/paritytech/polkadot-sdk.git", tag = "polkadot-v1.9.0", default-features = false, features = ["std"] }
