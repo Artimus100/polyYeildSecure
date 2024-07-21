@@ -10,7 +10,8 @@ homepage = "https://yourprojecthomepage.com"
 [dependencies]
 cargo-xcode = "1.11.0"
 clang = "2.0.0"
-
+libc_errno = { package = "errno", version = "0.3.8", default-features = false }
+libc = { version = "0.2.153", default-features = false }
 sp-core = { git = "https://github.com/paritytech/polkadot-sdk.git", tag = "polkadot-v1.9.0", default-features = false, features = ["serde", "std"] }
 sp-runtime = { git = "https://github.com/paritytech/polkadot-sdk.git", tag = "polkadot-v1.9.0", default-features = false, features = ["std"] }
 frame-support = { git = "https://github.com/paritytech/polkadot-sdk.git", tag = "polkadot-v1.9.0", default-features = false, features = ["std"] }
