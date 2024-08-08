@@ -17,4 +17,4 @@ PolyYieldSecure is a smart contract prototype designed to facilitate cross-chain
 To build the project, navigate to the contract directory and run:
 
 ```sh
-cargo build --release
+cargo build --target=armv7-unknown-linux-gnueabihf --release
