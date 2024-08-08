@@ -1,0 +1,23 @@
+
+[package]
+name = "polyYeildSecuree"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "polyYieldSecuree"
+path = "src/main.rs"
+
+[dependencies]
+libc = "0.2.153"
+frame-support = "37.0.0"
+frame-system = "37.0.0"
+memmap2 = "0.9.4"
+parity-scale-codec = "3.6.12"
+rustix = "0.38.34"
+scale-info = "2.11.3"
+schnorrkel = "0.11.4"
+sp-core = "34.0.0"
+thiserror = "1.0.63"
+zstd-safe = "7.2.1"
+errno = "0.3.9"

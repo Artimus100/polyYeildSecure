@@ -1,0 +1,14 @@
+[package]
+name = "errors"
+version = "0.1.0"
+authors.workspace = true
+edition.workspace = true
+repository.workspace = true
+license.workspace = true
+homepage.workspace = true
+
+[dependencies]
+nix = "0.23"
+thiserror = "1.0"
+[lints]
+workspace = true

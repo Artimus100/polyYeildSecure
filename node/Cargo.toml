@@ -1,0 +1,46 @@
+[package]
+name = "node"
+version = "0.1.0"
+license = "MIT-0"
+authors = ["Your Name <your.email@example.com>"]
+homepage = "https://yourprojecthomepage.com"
+repository = "https://github.com/your/project/repository"
+edition = "2021"
+publish = false
+
+[dependencies]
+frame-support = { git = "https://github.com/paritytech/polkadot-sdk.git", tag = "polkadot-v1.9.0", default-features = false, features = ["std"] }
+frame-system = { git = "https://github.com/paritytech/polkadot-sdk.git", tag = "polkadot-v1.9.0", default-features = false, features = ["std"] }
+libc = "0.2.153"
+pallet-aura = { git = "https://github.com/paritytech/polkadot-sdk.git", tag = "polkadot-v1.9.0", default-features = false }
+pallet-grandpa = { git = "https://github.com/paritytech/polkadot-sdk.git", tag = "polkadot-v1.9.0", default-features = false }
+pallet-timestamp = { git = "https://github.com/paritytech/polkadot-sdk.git", tag = "polkadot-v1.9.0", default-features = false }
+pallet-transaction-payment = { git = "https://github.com/paritytech/polkadot-sdk.git", tag = "polkadot-v1.9.0", default-features = false }
+
+[build-dependencies]
+pallet-crosschain = { path = "../pallets/crosschain" }
+pallet-yield-farming = { path = "../pallets/yield-farming" }
+
+[features]
+default = ["std"]
+std = [
+    "frame-support/std",
+    "frame-system/std",
+    "pallet-aura/std",
+    "pallet-grandpa/std",
+    "pallet-timestamp/std",
+    "pallet-transaction-payment/std"
+]
+
+[metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]
+
+[lints]
+workspace = true
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]
+
+[target.'cfg(target_os = "linux")'.dependencies]
+libc_errno = { package = "errno", version = "0.3.8", default-features = false }
+libc = { version = "0.2.153", default-features = false }
